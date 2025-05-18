@@ -1,0 +1,80 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run Pytest with HTML Report",
+            "type": "shell",
+            "command": "${workspaceFolder}/backend/.venv/bin/python -m pytest -v --capture=no --html=backend/tests/reports/test_output.html",
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "echo": true,
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": []
+        },
+        {
+            "type": "npm",
+            "script": "dev",
+            "problemMatcher": [],
+            "label": "npm: dev",
+            "detail": "Start Nuxt development server",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "type": "npm",
+            "script": "build",
+            "group": "build",
+            "problemMatcher": [],
+            "label": "npm: build",
+            "detail": "Build Nuxt application for production"
+        },
+        {
+            "type": "npm",
+            "script": "generate",
+            "group": "build",
+            "problemMatcher": [],
+            "label": "npm: generate",
+            "detail": "Generate static version of Nuxt application"
+        },
+        {
+            "type": "npm",
+            "script": "start",
+            "problemMatcher": [],
+            "label": "npm: start",
+            "detail": "Start Nuxt production server"
+        },
+        {
+            "type": "npm",
+            "script": "lint",
+            "problemMatcher": [
+                "$eslint-stylish"
+            ],
+            "label": "npm: lint",
+            "detail": "Run ESLint on Nuxt project"
+        },
+        {
+            "type": "npm",
+            "script": "test",
+            "problemMatcher": [],
+            "label": "npm: test",
+            "detail": "Run tests for Nuxt application"
+        },
+        {
+            "type": "npm",
+            "script": "preview",
+            "problemMatcher": [],
+            "label": "npm: preview",
+            "detail": "Preview production build locally"
+        }
+    ]
+}

@@ -1,0 +1,55 @@
+[tool.black]
+line-length = 88
+target-version = ["py312"]
+
+[tool.autoflake]
+remove-all-unused-imports = true
+
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "SAMmy"
+version = "0.1.0"
+description = "A comprehensive management system for components and systems"
+authors = [
+    { name = "SAMmy Team", email = "admin@example.com" }
+]
+requires-python = ">=3.12"
+keywords = ["fastapi", "management", "components", "systems", "authentication"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9"
+]
+dependencies = [
+    "fastapi>=0.100.0",
+    "uvicorn>=0.22.0",
+    "pydantic>=2.0.2",
+    "python-jose>=3.3.0",
+    "passlib>=1.7.4",
+    "bcrypt>=4.0.1",
+    "python-multipart>=0.0.6",
+    "duckdb>=0.8.0",
+    "duckdb-engine>=0.8.0",
+    "cryptography>=41.0.1",
+    "sqlalchemy>=2.0.0",
+    "sqlmodel>=0.0.24",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.2.5",
+    "pytest-dependency>=0.5.1",
+    "pytest-html>=3.2.0",
+    "httpx>=0.24.0",
+    "pytest-cov>=2.12.1",
+    "black>=21.7b0",
+    "isort>=5.9.3",
+    "autoflake>=2.0.0",
+    "flake8>=3.9.2"
+]
